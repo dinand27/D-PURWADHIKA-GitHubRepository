@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>tes</title>
+</head>
+<body>
+    <form action="" id="formgue">
+        <p>Nama: <input type="text" name="nama" id="name"></p>
+        <p>Umur: <input type="number" name="age" id="age"></p>
+        <p>Kelamin: <input type="radio" name="sex" value="Pria">Pria <input type="radio" name="sex" value="Wanita">Wanita</p>
+        <p>Pekerjaan: <select id="job">
+                <option value="Guru">Guru</option>
+                <option value="Dokter">Dokter</option>
+                <option value="Pembalap">Pembalap</option>
+            </select>
+        </p>
+        <input type="button" value="Tambahkan" onclick="fun1()">
+        <p id="hasil">Hasil</p>
+    </form>
+    <script>
+    var fun1=() => {
+        var Nama= document.getElementById("name").value
+        var Umur= document.getElementById("age").value
+        var sex=''
+        var radio= document.getElementsByName('sex')
+        for(var i = 0; i < radio.length; i++){ 
+                if(radio[i].checked == true){
+                    sex = radio[i].value
+                }
+            }
+        var Pekerjaan= document.getElementById('job').value
+
+
+
+
+        var Tampil= document.getElementById("hasil")
+        Tampil.innerHTML=`<b>Nama: ${Nama}</b> <br>
+            <b>Usia: ${Umur}</b> <br>
+            <b>Gender: ${sex}</b> <br>
+            <b>Pekerjaan: ${Pekerjaan}</b> 
+            `
+        }
+    </script>
+
+</body>
+</html>

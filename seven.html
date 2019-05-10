@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seven</title>
+
+    <!-- <script defer src="./seven.js"></script> -->
+
+</head>
+<body>
+    <!-- TAG / ELEMENT -->
+    <!-- id sifatnya unique -->
+
+    <form  id="form" name="Ini Form">  
+        <p>Nama : <input type="text" id="name"></p>
+        <p>Usia : <input type="text" id="age"></p>
+
+        <p>
+            Gender: <input type="radio" name="gender" value="Laki-laki"> PRIA
+            <input type="radio" name="gender" value="Perempuan"> WANITA
+        </p>
+
+        <p>
+            Status: <input type="checkbox" name="status" value="Kuliah"> Kuliah
+            <input type="checkbox" name="status" value="Bekerja"> Bekerja
+
+        </p>
+        <p>
+            Skill: <input type="checkbox" name="skill" value="HTML"> HTML
+            <input type="checkbox" name="skill" value="CSS"> CSS
+            <input type="checkbox" name="skill" value="Javascript"> Javascript
+
+        </p>
+    </form>
+    <br><br>
+
+    <button onclick="myFunction()">Coba di klik!</button>
+    <p id="paragraf"> Hasil </p>
+
+    <script>      
+        var myFunction = () => {
+            // var form = document.getElementById('form')
+            // var input = form[0] // object dengan property berupa angka
+            // var data = input.value
+            var name = document.getElementById('name').value
+            var age = document.getElementById('age').value
+            var gender = ''
+            var skill = [], status = []
+            var prgrf = document.getElementById('paragraf')
+            var radio = document.getElementsByName('gender') // NodeList (Array)
+            var checkSkill = document.getElementsByName('skill')
+            var checkStatus = document.getElementsByName('status')
+            for(var i = 0; i < checkStatus.length; i++){
+                if(checkStatus[i].checked == true){
+                    status.push(checkStatus[i].value)
+                }
+            }
+            for(var i = 0; i < checkSkill.length; i++){
+                if(checkSkill[i].checked == true){
+                    skill.push(checkSkill[i].value)
+                }
+            }
+            
+            // radio.length = banyak data pada array (2 tag input)
+            for(var i = 0; i < radio.length; i++){ 
+                if(radio[i].checked == true){
+                    gender = radio[i].value
+                }
+            }
+            
+            if(status.length == 1){
+                status = `Hanya ${status[0]}`
+            } else {
+                // status = `${status[0]} dan ${status[1]}` // option pertama
+                status = status.join(' dan ')
+            }
+            prgrf.innerHTML = `<b>Nama: ${name}</b> <br>
+            <b>Usia: ${age}</b> <br>
+            <b>Gender: ${gender}</b> <br>
+            <b>Status: ${status}</b> <br>
+            <b>Skill: ${skill.join(' dan ')}</b> `
+            // console.log(`Nama: ${name}`);
+            // console.log(`Usia: ${age}`);
+            // console.log(`Gender: ${gender}`);
+            // console.log(`
+            // Nama: ${name}
+            // Usia: ${age}
+            // Gender: ${gender}`);
+            
+            
+        }
+        
+    </script>
+
+</body>
+</html>

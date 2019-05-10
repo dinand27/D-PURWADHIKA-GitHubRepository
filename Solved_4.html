@@ -1,0 +1,17 @@
+<html>
+    <head>pertemuan2 :SOlved 4 mencari tahun, minggu, bulan dan hari<p></p></head>
+    <body>
+        <script>
+           var hari_awal=prompt("Masukkan Jumlah Hari")
+           var tahun= Math.floor(hari_awal/360)
+           var hari= hari_awal % 360 //mencari sisa hasil bagi dari hari dikurangi tahun
+           var bulan=Math.floor(hari/30)
+           hari=hari%30
+           var minggu=Math.floor(hari/7)
+           hari=hari % 7
+           
+           document.write(hari_awal+' Hari = '+tahun+' Tahun, '+bulan+' bulan, '+minggu+' Minggu, dan '+hari+' Hari')
+
+        </script>
+    </body>
+</html>

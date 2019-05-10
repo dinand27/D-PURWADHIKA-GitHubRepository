@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tugas</title>
+    <style>
+        table, th, td {
+            border:1px solid black;
+            border-collapse: collapse;
+            padding:25px;
+        }
+    </style>
+</head>
+<body><center>
+    <table>
+    
+            <tr> 
+                <th><h3></h3>Form Manusia</h3></th></th>
+                <th><h3></h3>Form Hewan</h3></th></th>
+            </tr>
+            <tr><form id="form_manusia" name="manusia">
+                <td>Nama <input type="text" name="nama" id="nama"><br><br>
+                    Usia <input type="text" name="nama" id="usia"><br><br>
+                    Kelamin:<input name="pria" type="radio" id="kelamin">Pria
+                    <input name="wanita" type="radio" id="kelamin">Wanita <br><br>
+                    Pekerjaan: <select name="pekerjaan" id="" enabled="">
+                        <option>Dokter</option>
+                        <option>Karyawan Swasta</option>
+                        <option>PNS</option>
+                        </select><br> <br>
+                        <button onclick="myFunction()">Klik</button> 
+                    <p id="paragraf"></p>
+                    <script>
+                            var myFunction=()=>{
+                                var name=document.getElementById('name').values
+                                var usia=document.getElementById('usia').values
+                                var radio=document.getElementsByName('kelamin').values
+                                var radioValue=''
+                                for(var i=0; i<radio.length; i++){
+                                    if(radio.cheked[i]==true)
+                                    console.log(radioValue)
+                                }
+
+                                
+                            }
+                        </script>               
+                
+            </form>
+                </td>
+                <td>Nama <input type="text" name="nama" id="nama"><br><br>
+                    Umur <input type="text" name="nama" id="nama"><br><br>
+                    Kelamin:<input name="pria" type="radio" id="kelamin">Jantan
+                    <input name="wanita" type="radio" id="kelamin">Betina <br><br>
+                    Status: <input name="liar" type="radio" id="status">Liar
+                    <input name="peliharaan" type="radio" id="status">Peliharaan <br><br>
+                    <input type="button" value="Tambahkan">
+                 </td> 
+                 </tr>  
+
+        
+    </table></form>
+
+
+
+
+
+    
+<table><br>
+        <tr> 
+                <th colspan="4"><h3>Data Manusia</h3></th>
+                <th colspan="4"><h3>Data Hewan</h3></th>
+         </tr>
+        <tr>
+             <td>Nama</td>
+             <td>Umur</td>
+             <td>Kelamin</td>
+             <td>Pekerjaan</td>
+             <td>Nama</td>
+             <td>Umur</td>
+             <td>Kelamin</td>
+             <td>Status</td>
+         </tr>
+         
+
+</table>
+</center>
+
+</body>
+</html>

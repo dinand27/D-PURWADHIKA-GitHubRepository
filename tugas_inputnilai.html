@@ -1,0 +1,43 @@
+<html>
+    <head>PERTEMUAN 4 : Membuat Input Nilai Siswa dengan If<p></p></head>
+    <body>
+        <script>
+       var nama=prompt('Input Nama Siswa:');
+       var nilmtk=parseInt(prompt('Nilai Matematika : '));
+       var nilbi=parseInt(prompt('Nilai Bahasa Indonesia:'));
+       var nilbing=parseInt(prompt('Nilai Bahasi Inggris :'));
+       var nilipa=parseInt(prompt('Nilai Ilmu Pengetahuan Alam :'));
+       var nilrata2=(nilmtk+nilbi+nilbing+nilipa)/4;
+       
+       
+       document.write('<p>Nama Siswa : '+nama+'</p>');
+       document.write('<p>Nilai Matematika : '+nilmtk+'</p>');
+       document.write('<p>Nilai Bahasa Indonesia :'+nilbi+'</p>');
+       document.write('<p>Nilai Bahasa Inggris : '+nilbing+'</p>');
+       document.write('<p>Nilai Ilmu Pengetahuan Alam : '+nilipa+'</p>');
+       document.write('<p>Dengan Nilai Rata -rata = '+nilrata2+'</p>');
+
+       if (nilrata2 >= 85) {
+           document.write('<p>Grade : A</p>');
+
+       }else if(nilrata2 >= 76 ) {
+        document.write('<p>Index NIlai : B</p>');
+
+       }else if(nilrata2 >= 66){
+           document.write('<p>Index NIlai : C </p>');
+
+       }else if(nilrata2 >= 50){
+        document.write('<p>Index NIlai : D</p>');
+
+       }else { 
+           document.write('<p>Index NIlai : E</p>');
+        }
+        if (nilrata2 >= 66){
+            document.write('Selamaat!! Anda telah Lulus');
+        }else {
+            document.write('Maaf anda berakhir sampai disni');
+        }
+       
+       </script>
+    </body>
+</html>

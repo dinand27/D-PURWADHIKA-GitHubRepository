@@ -1,0 +1,83 @@
+<!-- <form id="form">
+    Nama : <input type="text"> <br>
+    Usia : <input type="number"><br>
+    
+</form>
+<button onclick="fungsiku()"> Coba Klik</button>
+<p id="tes"></p>
+<script>
+    function fungsiku() {
+        let input1= document.getElementById("form").elements[0].value;
+        let input2= document.getElementById("form").elements[1].value;
+        document.getElementById("tes").innerHTML= input1+', '+input2; 
+        
+    }
+</script> -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form id="form" name="iniform">
+        Nama : <input type="text" id="nama"><br>
+        Usia : <input type="text" id="age">
+    </form><br>
+
+    <button onclick="myFunction()"> Klik</button>
+    <p id="disini">hasil : </p>
+    <script>
+        var myFunction=() =>  {
+            var hasil=document.getElementById('form')[0].value;
+            console.log(hasil);
+            var name=document.getElementById('name').value
+            var age=document.getElementById('age').value
+            var radio=document.getElementsByName('gender')
+            var radioValue=''
+            for(var i=0; i<radio.length; i++){
+                if(radio.cheked[i]==true)
+                console.log(radioValue)
+            }
+        }  -->
+  
+        
+    <form id="form" name="iniform">
+
+        Nama : <input type="text" name="nama" id="nama"> <br>
+        Umur : <input type="text" name="usia" id="usia"> <br>
+        <input  name="Pria" type="radio" id="gender">
+        <input  name="Wanita" type="radio" id="gender"><br>
+        
+     </form><br>
+
+    <button onclick="myFunction()"> Klik</button>
+     <p id="disini">hasil : </p>
+     <script>
+     var myFunction=() =>  {
+            var hasil=document.getElementById('nama').value;
+            var hasil2=document.getElementById('usia').value;
+            console.log(hasil);
+            console.log(hasil2);
+            var radio=document.getElementsByName('gender')
+           var radioValue=''
+            for(var i=0; i < radio.length;i++){
+                if(radio[i].cheked==true) {
+                    radio.value=radio[i].value
+                }
+        } 
+            console.log(radio.value)
+    }
+    //     atau: 
+    //     var myFunction=()=> {
+    //          var form=document.getElementById('form') //disni fungsi mengambil nilai dari form
+    //         var input=form[0] //disni sudah terisi form dengan properti ke [0], jadi [0] ini bukan array
+    //           var hasil= input.value //disni html mengambil nilai value yang diinput
+    //           console.log(hasil)
+
+    //      }
+        
+        
+    </script>
+</body>
+</html>

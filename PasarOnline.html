@@ -1,0 +1,58 @@
+<html>
+    <title>Pasar Online V.1.0</title>
+    <body>
+        <script>
+             var bayar,awal;
+             var harga=[25000, 50000, 75000];
+             var menu=['Ayam', 'Ikan', 'Sapi'];
+             function yakin(){
+                 confirm('Apakah anda ingin belanja lagi? ')}
+             alert('Selamat Datang di Pasar Online')
+              awal=prompt('Silahkan Pilih Belanjaan Anda'+ '\n Masukkan Pilihan :  \n 1. Ayam @45.000 \n 2.Ikan @15.000 \n 3. Sapi @60.000')
+              if (awal == 1){
+               jmlhayam=prompt('Silahkan Masukkan Jumlah Pesanan '+menu[0]+' anda :');
+               belanja=jmlhayam*harga[0];
+               alert('Jumlah Pesanan '+menu[0]+' anda =  '+jmlhayam+' x '+harga[0]+' = '+belanja);
+                 if (yakin()) {
+                     window.location.reload();
+                 }            
+              }else if (awal==2){
+                  jmlhikan=prompt('Silahkan Masukkan Jumlah Pesanan '+menu[1]+' anda :');
+                  belanja=jmlhikan*harga[1];
+               alert('Jumlah Pesanan '+menu[1]+' anda =  '+jmlhikan+' x '+harga[1]+' = '+belanja);
+               if (yakin()) {
+                     window.location.reload();
+                 }
+              } else if(awal==3){
+                  jmlhsapi=prompt('Silahkan Masukkan Jumlah Pesanan '+menu[2]+' anda :');
+                  belanja=jmlhsapi*harga[2];
+               alert('Jumlah Pesanan '+menu[2]+' anda =  '+jmlhsapi+' x '+harga[2]+' = '+belanja);
+               if (yakin) {
+                     window.location.reload();
+                 }
+               } else  
+              Alert(' Maaf pilihan anda salah')
+              window.location.reload()
+              
+            //      var jmlhayam=prompt('Silahkan Masukkan Jumlah Pesanan :')
+            //      bayar= jml * 45000
+            //      alert('Jumlah Pesanan Ayam ='+jmlhayam+ '\n' + 'Total Bayar ='+ bayar);
+                
+            //     (awal==2) 
+            //      var jmlhikan=prompt('Silahkan Masukkan JUmlah Ikan :')
+            //      bayar= jmlhikan * 15000
+            //      alert('Jumlah Pesanan Ikan ='+jmlhikan+ '\n' + 'Total Bayar ='+ bayar);
+
+            //     (awal== 3) 
+            //      var jmlhsapi=prompt('Silahkan Masukkan Jumlah Sapi :')
+            //      bayar= jmlhsapi * 60000
+            //      alert('Jumlah Pesanan Daging Sapi='+jmlhsapi+ '\n' + 'Total Bayar ='+ bayar);
+            //  } while (awal>3) alert('Maaf Pilihan Anda tidak tersedia');
+            
+             
+            
+            
+            
+            </script>
+    </body>
+</html>

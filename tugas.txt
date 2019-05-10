@@ -1,0 +1,74 @@
+Nilai Ujian
+
+
+Akan meminta inputan untuk mata pelajaran dibawah ini:
+Nama siswa
+Nilai Matematika
+Nilai Bahasa Indonesia
+Nilai Bahasa Inggris
+Nilai Ilmu Pengetahuan Alam
+
+Nilai di rata2
+
+(Lulus: A - C, tidak lulus D - E)
+85 ke atas A
+84 - 76 B
+75 - 66 C
+65 - 50 D
+sisanya E
+
+Nama : Alvin
+Dengan nilai akhir : 76
+Index Nilai : B
+Selamat, Anda dinyatakan lulus.
+
+Nama : Alvin
+Dengan nilai akhir : 49
+Index Nilai : E
+Mohon maaf, Anda dinyatakan tidak lulus.
+
+Latihan 2
+
+PasarOnline V1.1
+
+Selamat datang di PasarOnline
+    daftar menu:
+    1. Ayam @ 25.000
+    2. Ikan @ 50.000
+    3. Sapi @ 75.000
+
+Masukkan jumlah Ayam/Ikan/Sapi
+
+Ingin belanja lagi ?
+    jika iya akan kembali ke menu awal
+    jika tidak lanjut minta uang
+
+alert{
+    Ayam
+    25.000 x jumlah = hasil
+    Ikan
+    50.000 x jumlah = hasil
+    Sapi
+    75.000 x jumlah = hasil
+
+    Total yang harus dibayar
+}
+Masukkan Uang
+    Jika kurang dari total biaya
+        Hasil belanja sekian
+        Uang yang anda masukkan kurang sekian
+        Masukkan jumlah uang kembali
+    Jika pas atau lebih maka lanjut
+
+    console.log(
+    Data belanjaan
+        barang X jumlah = hasil
+        barang X jumlah = hasil
+        barang X jumlah = hasil
+
+        total belanja
+        Jumlah uang
+        kembali
+
+        Terimakasih, hati - hati
+)

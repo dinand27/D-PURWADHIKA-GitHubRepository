@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Membuat TOmbol INput</h3>
+
+<input type="text" id="myText" value="Some text...">
+
+<p>Click the "Try it" button to get the text in the text field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="tes"></p>
+
+<script>
+function myFunction() {
+  var input1 = document.getElementById("myText").value;
+  document.getElementById("tes").innerHTML = input1;
+}
+
+
+</script>
+
+</body>
+</html>

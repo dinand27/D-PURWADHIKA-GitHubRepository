@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>tABEL3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="clue1 untuk onchange1.js"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        form {
+            width: 45%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <form >
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama: <input type="text" id="search" oninput="funFilterName()"></p>
+            <p>Umur: <input type="number" name="num1" id="num1" onkeyup="funFilterUmur()"> - <input type="number" name="num2" id="num2"
+                    onkeyup="funFilterUmur()"></p>
+            <p>Pekerjaan: <select name="job" id="job" ><option value=""></option>
+                </select>
+            </p>
+            <p><input type="button" value="Search Job" onclick="funFilterJob()"></p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                <td><input type="text" name="nama" id="nama"></td>
+                <td><input type="number" name="nama" id="umur"></td>
+                <td><input type="text" name="nama" id="jobInput"></td> 
+                <!-- setiap ada Job yang baru, cek array job. kalau blm ada, push ke array job -->
+            </table>
+            <p><input type="button" value="Submit" onclick="funInput()"></p>
+        </fieldset>
+        <fieldset>
+            <legend>Tabel Data</legend>
+            <table id="myTable">
+                <thead>
+                    <th>Nama</th>
+                    <th>Umur</th>
+                    <th>Pekerjaan</th>
+                </thead>
+                <tbody id="here">
+                    
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

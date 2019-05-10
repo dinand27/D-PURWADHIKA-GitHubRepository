@@ -1,0 +1,199 @@
+// OBJECT
+// Mampu menyimpan banyak data seperti array
+// jika pada array menggunakan index, object menggunakan property
+// Mampu menyimpan data apapun (String, Number, Boolean, undefined)
+
+// namaDpn, namaBlkd adalah sebuah property
+// Akses value -> object.property
+// var manusia2 = {
+//     namaDpn: "Baron",
+//     namaBlkg: "Purwa Hartono",
+//     usia: 22,
+//     job: "Leader Academic"
+// }
+
+// var manusia = {
+//     namaDpn: "Andi",
+//     namaBlkg: "Susilo",
+//     usia: 50,
+//     job: "Artist",
+//     alive: true,
+//     namaFull: function() {
+//         return this.namaDpn + " " + this.namaBlkg
+//     },
+//     sayHello: function(nama) {
+//         console.log("Hai " + nama);
+//     }
+// }
+// property : namaDpn, namaBlkg, usia, job, alive
+// method: namaFull
+// var namaLengkap = manusia.namaFull()
+// console.log(namaLengkap); // Andi Susilo
+// manusia.sayHello("Alex") // Hai Alex
+// manusia.sayHello(manusia.namaFull())// Hai Andi Susilo
+
+// Object literal
+
+var orang = {namaDpn: "janice", namaBlkg: "manuella"}
+orang.usia = 46
+
+// keyword 'new'
+
+var warna = new Object()
+
+warna.pertama = "Red"
+warna.kedua = "Green"
+warna.ketiga = "Blue"
+
+// console.log(warna);
+
+// Object constractor
+
+// var manusia = function (nama, umur, job) { //  function expression
+//     this.namaDpn = nama
+//     this.usia = umur
+//     this.pekerjaan = job
+// }
+
+// function manusia2 (nama, umur, job){ // function declaration
+//     this.namaDpn = nama
+//     this.usia = umur
+//     this.pekerjaan = job
+// }
+
+// var satu = new manusia("Andi", 30, 'PNS')
+// var satu2 = new manusia2("Aldi", 40, 'Pengusaha')
+// console.log(satu.usia);
+// console.log(satu2["usia"]);
+
+// Adding, Changing, and Deleting Properties
+// satu.alamat = "BSD"  // Menambah property
+
+// satu.usia = function () { // Mengubah value property
+//     console.log("Telah diubah menjadi function");
+    
+// }
+
+// delete satu.usia // Menghapus
+
+// console.log(satu);
+
+
+// var objOne = {
+//     propOne: "String biasa",
+//     propTwo: {
+//         subPropOne: 23,
+//         subPropTwo : function(x) {
+//             console.log("Sub Property Two " + x);
+//         }
+//     },
+//     propThree: ["Red", "Green", "Blue"],
+//     propFour: [
+//         12,
+//         {insideOne: 44, insideTwo: 45}
+//     ]
+// }
+// 
+// console.log(objOne.propFour[1].insideTwo);// 45
+// console.log(objOne.propTwo.subPropOne); //  23
+// objOne.propTwo.subPropTwo() // Sub Property Two
+// objOne.propTwo.subPropTwo(objOne.propTwo.subPropOne) // Sub Property Two
+
+// function cons2(arr1, arr2, obj1, obj2) {
+//     this.nama = [arr1, arr2];
+//     this.usia = {satu: obj1, dua: obj2}
+// }
+
+// var obj2 = new cons2 ("Red", "Green", 23, 24)
+
+// // console.log(obj2);
+
+// var hari = {
+//     pertama: "Senin",
+//     kedua: "Selasa",
+//     ketiga: "Rabu",
+//     keempat: "Kamis",
+//     kelima: "Jumat",
+//     keenam: "Sabtu"
+// }
+// var namaProp // Akan  berisi nama stiap property
+// // Looping For in
+// for (namaProp in hari) {
+//     console.log(namaProp + ": " + hari[namaProp]);
+    
+// }
+
+// function People (name, age, job) {
+//     this.name = name,
+//     this.age = age,
+//     this.job = job
+// }
+// People.prototype.address = 'Jakarta' // Semua object akan memiliki properti ini
+
+// var alvin = new People('Alvin', 40, 'Freelancer')
+
+// console.log(alvin.name); // Alvin
+// console.log(alvin.address) // jakarta
+
+// Class
+class MakhlukHidup {
+    constructor(place, hidup){ // tempat membuat property
+        this.tempatTinggal = place
+        this.bernyawa = hidup
+    }
+
+    // tempat membuat method
+    makan() {
+        console.log("Sedang makan");
+    }
+
+    bernafas() {
+        console.log("Sedang bernafas");
+        
+    }
+}
+
+class manusia extends MakhlukHidup {
+    constructor (place, hidup, mind){
+        super(place, hidup) // Menjalankan constructor milik Makhluk Hidup
+        this.akal = mind
+    }
+
+    bekerja() {
+        console.log("Sedang bekerja");
+    }
+
+}
+
+var manusia2 = new manusia("Bumi", true, "Punya")
+
+console.log(manusia2.tempatTinggal);
+console.log(manusia2.bernyawa);
+console.log(manusia2.akal);
+manusia2.makan()
+manusia2.bernafas()
+manusia2.bekerja()
+
+// Buat class Hewan
+    // properties : bertelur, beranak
+    // method: berburu
+
+// Buat class Tumbuhan
+    // properties: berbunga, berbuah
+    // method : fotosintesis
+
+
+
+
+
+
+
+
+
+
+
+// Manusia , hewan, dan tumbuhan
+// Tempat tinggal -> property
+// Bernyawa -> property
+// Makan -> method
+// Bernafas -> method

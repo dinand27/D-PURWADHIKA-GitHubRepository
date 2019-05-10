@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- <script defer src="./seven.js"></script> -->
+
+</head>
+<body>
+    <!-- TAG / ELEMENT -->
+    <!-- id sifatnya unique -->
+
+    <form id="form" name="Ini Form">
+        <p>Nama : <input type="text" id="name"></p>
+        <p>Usia : <input type="text" id="age"></p>
+
+        <p>
+            Gender: <input type="radio" name="gender" value="Laki-laki"> PRIA
+            <input type="radio" name="gender" value="Perempuan"> WANITA
+        </p>
+        <p>
+            Skill : <input type="checkbox" name="skill" value="html">HTML 
+            <input type="checkbox" name="skill" value="css"> CSS 
+            <input type="checkbox" name="skill" value="javascript"> Javascript
+        </p>
+    </form>
+    <br><br>
+
+    <button onclick="myFunction()">Coba di klik!</button>
+    <p id="disini"> Hasil </p>
+
+    <script>      
+
+        var myFunction = () => {
+            var form = document.getElementById('form')
+            var input = form[0] // object dengan property berupa angka
+            var data = input.value
+          
+        
+
+            var name = document.getElementById('name').value
+            var age = document.getElementById('age').value
+            var radio = document.getElementsByName('gender') // NodeList (Array)
+            var radioValue = ''
+            var skill=[], status=[]
+
+            // for(var i = 0; i < radio.length; i++){
+            //     if(radio[i].checked == true){
+            //         radioValue = radio[i].value
+            //     }
+            // }console.log(radioValue)
+
+
+            var prgrf = document.getElementById('disini')
+            var radio=document.getElementsByName('gender')
+            var checkbox=document.getElementsByName('skill')
+        
+            // for (var i=0; i<checkbox.length; i++){
+            //     if (checkbox[i].checked==true){
+            //         skill.push(checkbox[i].value)
+            //     }
+            // }console.log(skill)
+
+
+            // prgrf.innerHTML = `<b>Nama: ${name}</b> <br>
+            // <b>Usia: ${age}</b>
+            // <b>Gender: ${gender}</b>
+            `
+        }
+        
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

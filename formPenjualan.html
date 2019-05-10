@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>Form Javascript</title>
+</head>
+<body>
+<h2>____Form Penjualan Berbasis JavaScript____</h2>
+<form name='form_pemesanan' action='#'>
+<table border='1px'>
+<tr>
+<th width='20px'>No</th>
+<th width='200px'>Makanan/Minuman</th>
+<th width='100px'>Harga</th>
+<th width='100px'>Pesan</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Bakso Istimewa</td>
+<td>@
+<input type='text'
+name='bakso'
+value='12000'
+size='6'
+readonly='true'/></td>
+<td >
+<input type='text'
+name='harga_Bakso'
+value='0'
+onKeyUp='hitungPesan()'/>
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Soto Spesial</td>
+<td>@
+<input type='text'
+name='soto'
+value='10000'
+size='6'
+readonly="true"/>
+</td>
+<td>
+<input type='text'
+name='harga_Soto'
+value='0'
+onKeyUp='hitungPesan()'/>
+</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Mie Ayam Super</td>
+<td>@
+<input type='text'
+name='mie'
+value='15000'
+size='6'
+readonly='true'/></td>
+<td>
+<input type='text'
+name='harga_Mie'
+value='0'
+onKeyUp='hitungPesan()'/>
+</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Es Degan</td>
+<td>@
+<input type='text'
+name='degan'
+value='7000'
+size='6'
+readonly='true'/>
+</td>
+<td>
+<input type='text'
+name='harga_Degan'
+value='0'
+onKeyUp='hitungPesan()'/>
+</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Es Campur</td>
+<td>@
+<input type="text"
+name="campur"
+value=7000
+size=6
+readonly=true/>
+</td>
+<td>
+<input type='text'
+name='harga_Campur'
+value='0'
+onKeyUp='hitungPesan()'/></td>
+</tr>
+
+<tr>
+<td
+colspan='3'
+align='right'>
+Jumlah Total
+</td>
+<td>
+<input type='text'
+name='Total'
+readonly='true' />
+</td>
+</tr>
+
+<tr>
+<td
+colspan='3'
+align='right'>
+Diskon
+</td>
+<td>
+<input type='text'
+name='Diskon'
+readonly='true' />
+</td>
+</tr>
+
+<tr>
+<td
+colspan='3'
+align='right'>
+Jumlah Dibayar
+</td>
+<td>
+<input type='text'
+name='Bayar'
+readonly='true'
+align='right'/>
+</td>
+</tr>
+
+</table>
+<br/>
+<input type='button'
+value='BATAL'
+onMouseUp='resetForm()' />
+</form>
+<script language="JavaScript" type="text/javascript">
+<!
+function hitungPesan(){
+var nota = document.form_pemesanan;
+var jumlahBakso = 12000 * parseInt(nota.harga_Bakso.value);
+var jumlahSoto = 10000 * parseInt(nota.harga_Soto.value);
+var jumlahMie = 15000 * parseInt(nota.harga_Mie.value);
+var jumlahDegan = 5000 * parseInt(nota.harga_Degan.value);
+var jumlahCampur = 7000 * parseInt(nota.harga_Campur.value);
+var jumlahTotal = jumlahBakso + jumlahSoto + jumlahMie + jumlahDegan + jumlahCampur;
+if (jumlahTotal > 50000){
+nota.Total.value = jumlahTotal;
+nota.Diskon.value = 10000;
+nota.Bayar.value = jumlahTotal � 10000;
+} else {
+nota.Total.value = jumlahTotal;
+nota.Diskon.value = 0;
+nota.Bayar.value = jumlahTotal;
+}
+}
+function resetForm(){
+document.form_pemesanan.reset();
+}
+//�>
+</script>
+</body>
+</html>

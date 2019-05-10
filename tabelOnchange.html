@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form>
+        Silahkan pilih tujuan anda:
+        <select id="tujuan" name="tujuan" onchange="proses()" >
+          <option value="" selected>Pilih Tujuan Anda</option>
+          <option value="Rp. 10.000,-">Banyuwangi</option>
+          <option value="Rp. 150.000,-">Jakarta</option>
+          <option value="Rp. 75.000,-">Surabaya</option>
+        </select>
+    
+        Harga Tiket : <input type="text" name="harga" id="harga" />
+    </form> -->
+    <input type="text" id="input" oninput="inputan()" />
+<div id="cetak"></div>
+    <!-- <script>
+        function proses(){
+  var harga=document.getElementById("tujuan").value;
+  document.getElementById("harga").value=harga;
+  }
+    </script> -->
+    <script>
+            function inputan(){
+                var x = document.getElementById("input").value;
+                document.getElementById("cetak").innerHTML = "Kamu sedang mengetik kata : "  + x;
+            }
+            
+            </script>
+    
+</body>
+</html>

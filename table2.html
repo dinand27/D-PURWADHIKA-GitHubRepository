@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>tABEL2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <script defer src="tabel2.js"></script> -->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        form {
+            width: 45%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <form >
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama: <input type="text" id="search" oninput="fn2()"></p>
+            <p>Umur: <input type="number" name="num1" id="num1" onkeyup="fn3()"> - <input type="number" name="num2" id="num2"
+                    onkeyup="fn3()"></p>
+            <p>Pekerjaan: <select name="job" id="job" ><option value="">Dev</option>
+                </select>
+            </p>
+            <p><input type="button" value="Search Job" onclick="fn4()"></p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                <td><input type="text" name="nama" id="nama"></td>
+                <td><input type="number" name="nama" id="umur"></td>
+                <td><input type="text" name="nama" id="jobT"></td> 
+                <!-- setiap ada Job yang baru, cek array job. kalau blm ada, push ke array job -->
+            </table>
+            <p><input type="button" value="Submit" onclick="fn1()"></p>
+        </fieldset>
+        <fieldset>
+            <legend>Tabel Data</legend>
+            <table id="myTable">
+                <thead>
+                    <th>Nama</th>
+                    <th>Umur</th>
+                    <th>Pekerjaan</th>
+                </thead>
+                <tbody id="here">
+                    
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</body>
+<script>
+var DataAsli=[
+    {nama: 'Alex', umur: 22, jobT: 'Dev'},
+    {nama: 'Alicia', umur: 32, jobT: 'Dev'},
+    {nama: 'Alona', umur: 26, jobT: 'Dev'},
+    {nama: 'Batios', umur: 33, jobT: 'CEO'},
+    {nama: 'Bakhti', umur: 38, jobT: 'PM'},
+    {nama: 'Charlee', umur: 27, jobT: 'CTO'}
+];
+var arrJob=['All' ,'Dev', 'CEO', 'PM', 'CTO', ''];    
+
+var fn1=()=> {
+    var DatNama= document.getElementById('nama').value 
+    var DatUmur=document.getElementById('umur').value
+    var DatJob=document.getElementById('jobT').value
+    DataAsli.push({
+        nama:DatNama,
+        umur:DatUmur,
+        jobT:DatJob
+    })
+    show(DataAsli, 'here')
+}
+var show=(arrei, target)=>{
+    var list=''
+    for(var i=0; i< arrei.length; i++){
+        list += `
+        <tr>
+            <td>${arrei[i].nama}</td>
+            <td>${arrei[i].umur}</td>
+            <td>${arrei[i].jobT}</td>
+            
+        </tr>
+        `
+    }
+    
+    document.getElementById(`${target}`).innerHTML=list
+}
+show(DataAsli,'here');
+
+var fn2=()=>{
+    var x= document.getElementById('search').value;
+    document.getElementById('here').innerHTML=x
+}
+</script>
+</html>

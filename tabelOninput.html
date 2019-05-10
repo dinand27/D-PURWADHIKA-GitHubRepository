@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>On-Input</title>
+</head>
+<body>
+    <input type="text" id="input" oninput="inputan()" />
+<div id="cetak">hasil</div>
+
+    <script>
+            function inputan(){
+                var x = document.getElementById("input").value;
+                document.getElementById("cetak").innerHTML = "Kamu sedang mengetik kata : "  + x;
+            }
+            
+            </script>
+    
+</body>
+</html>

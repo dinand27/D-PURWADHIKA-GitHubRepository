@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="tableFormV3.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        /* DIV */
+        div.wrapF {
+            margin: 13px;
+        }
+        /* Table */
+        table,th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            margin: 0 auto;   
+        }
+        table.satu {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        table.dalam {
+            margin: 20px;
+        }
+        thead th {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="satu">
+        <thead>
+                <th>Form Manusia</th>
+                <th>Form Hewan</th>
+        </thead>
+        <tr>
+            <td>
+                <div class="wrapF">
+                    <form action="">
+                        <p>Nama: <input type="text" name="nama" id="name"></p>
+                        <p>Umur: <input type="number" name="age" id="age"></p>
+                        <p>Kelamin: <input type="radio" name="gender" value="Pria">Pria <input type="radio" name="gender" value="Wanita">Wanita</p>
+                        <p>Pekerjaan: <select id="job">
+                                <option value="Guru">Guru</option>
+                                <option value="Dokter">Dokter</option>
+                                <option value="Pembalap">Pembalap</option>
+                            </select>
+                        </p>
+                        <input type="button" value="Tambahkan" onclick="fnManusia()">
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div class="wrapF">
+                    <form action="">
+                        <p>Nama: <input type="text" name="" id="nameH"></p>
+                        <p>Umur: <input type="number" name="" id="ageH"></p>
+                        <p></p>Kelamin: <input type="radio" name="sex" value="Pria" checked>Pria<input type="radio" name="sex" value="Wanita">Wanita</p>
+                        <p>Status: <input type="radio" name="stat" value="Liat">Liar <input type="radio" name="stat" value="Peliharaan">Peliharaan</p>
+
+                        <input type="button" value="Tambahkan" onclick="fnHewan()">
+                    </form>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table class="dua">
+        <thead>
+            <tr>
+                <th>Data Manusia</th>  
+                <th>Data Hewan</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                <table class="dalam">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Umur</th>
+                            <th>Kelamin</th>
+                            <th>Pekerjaan</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "mans">
+                        
+                    </tbody>
+                </table>
+            </td>
+            <td>
+                <table class="dalam">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Umur</th>
+                            <th>Kelamin</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "hews">
+
+                    </tbody>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

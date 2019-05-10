@@ -1,0 +1,30 @@
+<html>
+    <title>PasarOnline V1.1</title>
+<body>
+    <script>
+    var daftar_menu=['AYAM', 'iKAN', 'SAPi']; 
+
+    
+    var menu=prompt('Selamat datang di Pasar Online \n daftar menu: \n 1. Ayam @ 25.000 \n 2. Ikan @ 50.000 \n 3. Sapi @ 75.000');
+    if (menu >=4) {alert('Maaf pilihan salah');
+    location.reload();//untuk reload/refresh page
+    } else 
+    var jumlah=prompt('Masukkan jumlah Ayam/Ikan/Sapi'); 
+    var struk, struk2, bayar1,bayar2,bayar3, kembalian;
+
+    if(menu==1){
+        bayar1=prompt('Jumlah Pesanan '+daftar_menu[0]+' Anda = '+jumlah*25000+' \n JUMLAH UANG ANDA = ');
+        kembalian=bayar1-(jumlah*25000);
+        printout=alert('Jumlah Pesanan '+daftar_menu[0]+' Anda = '+jumlah*25000+' \n JUMLAH UANG ANDA = '+bayar1+' \n Kembalian = '+kembalian+' \n Terima kasih');
+    }else if(menu==2){
+        bayar2=prompt('Jumlah Pesanan '+daftar_menu[1]+' Anda = '+jumlah*50000+' \n JUMLAH UANG ANDA = ');
+        kembalian=bayar2-(jumlah*50000);
+        printout=alert('Jumlah Pesanan '+daftar_menu[1]+' Anda = '+jumlah*50000+' \n JUMLAH UANG ANDA = '+bayar2+' \n Kembalian = '+kembalian+' \n Terima kasih');
+     } else if(menu==3){
+        bayar3=prompt('Jumlah Pesanan '+daftar_menu[2]+' Anda = ' +jumlah*75000+' \n JUMLAH UANG ANDA = ');
+        kembalian=bayar3-(jumlah*75000);
+        printout=alert('Jumlah Pesanan '+daftar_menu[2]+' Anda = '+jumlah*75000+' \n JUMLAH UANG ANDA = '+bayar3+' \n Kembalian = '+kembalian+' \n Terima kasih');
+     } 
+    </script>
+    </body>
+        </html>

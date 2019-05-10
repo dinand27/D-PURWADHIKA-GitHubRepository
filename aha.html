@@ -1,0 +1,30 @@
+<html>
+      <title>pasar</title>
+  
+  <body>
+ <script>
+     var daftar_menu=['Ayam', 'Ikan', 'Sapi'];
+     alert('SELAMAT DATANG DI PASAR ONLINE')
+     function (menu_awal() {
+         var menu=prompt('Silahkan Pilih Belanjaan Anda'+ '\n Masukkan Pilihan :  \n 1. Ayam @25.000 \n 2.Ikan @50.000 \n 3. Sapi @ 75.000');
+    if (menu<=3){
+     var jumlah=prompt('Masukkan Jumlah Pesanan');
+    }else alert('Maaf Pilihan salah!');
+    
+    var ulangi=confirm('Apakah anda masih mau belanja lagi ?');
+    do{ ulangi==true
+        menu;
+        
+      }  while (jawab==false)
+           
+      if(menu==1){
+         alert('Jumlah Pesanan '+daftar_menu[0]+' Anda = '+jumlah*25000);
+     }else if(menu==2){
+         alert('Jumlah Pesanan '+daftar_menu[1]+' Anda = '+jumlah*50000);
+     }else if(menu==3){
+         alert('Jumlah Pesanan '+daftar_menu[2]+' Anda = '+jumlah*75000);
+     }else alert('Maaf Pilihan anda salah! ');
+   
+   </script>
+  </body>
+</html>
